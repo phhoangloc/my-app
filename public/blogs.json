@@ -1,0 +1,277 @@
+{
+  "success": true,
+  "message": "success",
+  "data": [
+    {
+      "id": 1,
+      "archive": "blog",
+      "name": "Getting Started with Next.js 14",
+      "slug": "getting-started-with-nextjs-14",
+      "host": {
+        "id": 1,
+        "username": "johndoe",
+        "email": "john@example.com"
+      },
+      "cover": "images/nextjs-cover.jpg",
+      "createdAt": "2024-01-15T10:30:00.000Z",
+      "tag": [
+        {
+          "tag": {
+            "id": 1,
+            "name": "Web Development"
+          }
+        },
+        {
+          "tag": {
+            "id": 2,
+            "name": "Next.js"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "archive": "blog",
+      "name": "Mastering TypeScript in 2024",
+      "slug": "mastering-typescript-2024",
+      "host": {
+        "id": 2,
+        "username": "janedoe",
+        "email": "jane@example.com"
+      },
+      "cover": "images/typescript-cover.jpg",
+      "createdAt": "2024-01-20T14:15:00.000Z",
+      "tag": [
+        {
+          "tag": {
+            "id": 3,
+            "name": "Programming"
+          }
+        },
+        {
+          "tag": {
+            "id": 4,
+            "name": "TypeScript"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "archive": "blog",
+      "name": "Building Responsive UIs with Tailwind CSS",
+      "slug": "building-responsive-uis-tailwind",
+      "host": {
+        "id": 1,
+        "username": "johndoe",
+        "email": "john@example.com"
+      },
+      "cover": "images/tailwind-cover.jpg",
+      "createdAt": "2024-02-01T09:00:00.000Z",
+      "tag": [
+        {
+          "tag": {
+            "id": 5,
+            "name": "CSS"
+          }
+        },
+        {
+          "tag": {
+            "id": 6,
+            "name": "Design"
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "archive": "blog",
+      "name": "React Hooks: A Complete Guide",
+      "slug": "react-hooks-complete-guide",
+      "host": {
+        "id": 3,
+        "username": "alexsmith",
+        "email": "alex@example.com"
+      },
+      "cover": "images/react-cover.jpg",
+      "createdAt": "2024-02-10T16:45:00.000Z",
+      "tag": [
+        {
+          "tag": {
+            "id": 7,
+            "name": "React"
+          }
+        },
+        {
+          "tag": {
+            "id": 1,
+            "name": "Web Development"
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "archive": "blog",
+      "name": "Database Design Best Practices",
+      "slug": "database-design-best-practices",
+      "host": {
+        "id": 2,
+        "username": "janedoe",
+        "email": "jane@example.com"
+      },
+      "cover": "images/database-cover.jpg",
+      "createdAt": "2024-02-15T11:20:00.000Z",
+      "tag": [
+        {
+          "tag": {
+            "id": 8,
+            "name": "Database"
+          }
+        },
+        {
+          "tag": {
+            "id": 9,
+            "name": "Backend"
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "archive": "blog",
+      "name": "API Security: Protecting Your Endpoints",
+      "slug": "api-security-protecting-endpoints",
+      "host": {
+        "id": 1,
+        "username": "johndoe",
+        "email": "john@example.com"
+      },
+      "cover": "images/security-cover.jpg",
+      "createdAt": "2024-02-20T13:30:00.000Z",
+      "tag": [
+        {
+          "tag": {
+            "id": 10,
+            "name": "Security"
+          }
+        },
+        {
+          "tag": {
+            "id": 9,
+            "name": "Backend"
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "archive": "blog",
+      "name": "Introduction to GraphQL",
+      "slug": "introduction-to-graphql",
+      "host": {
+        "id": 4,
+        "username": "sarahjones",
+        "email": "sarah@example.com"
+      },
+      "cover": "images/graphql-cover.jpg",
+      "createdAt": "2024-02-25T08:15:00.000Z",
+      "tag": [
+        {
+          "tag": {
+            "id": 11,
+            "name": "GraphQL"
+          }
+        },
+        {
+          "tag": {
+            "id": 9,
+            "name": "Backend"
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "archive": "blog",
+      "name": "Modern JavaScript: ES2024 Features",
+      "slug": "modern-javascript-es2024-features",
+      "host": {
+        "id": 3,
+        "username": "alexsmith",
+        "email": "alex@example.com"
+      },
+      "cover": "images/javascript-cover.jpg",
+      "createdAt": "2024-03-01T10:00:00.000Z",
+      "tag": [
+        {
+          "tag": {
+            "id": 12,
+            "name": "JavaScript"
+          }
+        },
+        {
+          "tag": {
+            "id": 3,
+            "name": "Programming"
+          }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "archive": "blog",
+      "name": "Docker and Containerization Guide",
+      "slug": "docker-containerization-guide",
+      "host": {
+        "id": 2,
+        "username": "janedoe",
+        "email": "jane@example.com"
+      },
+      "cover": "images/docker-cover.jpg",
+      "createdAt": "2024-03-05T15:30:00.000Z",
+      "tag": [
+        {
+          "tag": {
+            "id": 13,
+            "name": "DevOps"
+          }
+        },
+        {
+          "tag": {
+            "id": 14,
+            "name": "Docker"
+          }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "archive": "blog",
+      "name": "Building RESTful APIs with Express",
+      "slug": "building-restful-apis-express",
+      "host": {
+        "id": 1,
+        "username": "johndoe",
+        "email": "john@example.com"
+      },
+      "cover": "images/express-cover.jpg",
+      "createdAt": "2024-03-10T12:45:00.000Z",
+      "tag": [
+        {
+          "tag": {
+            "id": 15,
+            "name": "Express"
+          }
+        },
+        {
+          "tag": {
+            "id": 9,
+            "name": "Backend"
+          }
+        }
+      ]
+    }
+  ]
+}
+

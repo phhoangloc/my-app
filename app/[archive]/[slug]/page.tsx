@@ -34,7 +34,7 @@ const Page = () => {
                     <div className='uppercase px-2 rounded-2xl opacity-75 w-max mx-auto'>{moment(_item.createdAt).format("YYYY/MM/DD")}</div>
 
                     <h1 className='flex flex-col justify-center text-3xl font-bold text-center font-noto-serif'>{_item.name}</h1>
-                    <div className='uppercase py-1 px-2 rounded-2xl text-three font-bold w-max mx-auto'>{_item.archive}</div>
+                    {/* <div className='uppercase py-1 px-2 rounded-2xl text-three font-bold w-max mx-auto'>{_item.host}</div> */}
                 </div>
                 <div className="py-12">{parse(_item.content)}</div>
                 <div className="border-b border-t border-three h-12"></div>

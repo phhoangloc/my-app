@@ -9,11 +9,12 @@ const Layout = ({ children }: Props) => {
         <div>
             <Header />
             {/* <div className="h-4"></div> */}
-            <div className="pt-12 flex max-w-(--xxl) m-auto">
+            <div className="pt-12 flex m-auto justify-center">
                 <Sidebar />
                 <div className="w-full md:w-(--vw-60) max-w-(--md) px-4">
                     {children}
                 </div>
+                <div className="w-60 hidden xl:block"></div>
             </div>
 
         </div>

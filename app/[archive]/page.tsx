@@ -1,5 +1,6 @@
 'use client';
 import BlogDetail from '@/component/layout/detail/BlogDetail';
+import ProfileDetail from '@/component/layout/detail/ProfileDetail';
 import { UserState } from '@/redux/reducer/UserReduce';
 import store from '@/redux/store';
 import { useParams } from 'next/navigation';
@@ -15,16 +16,16 @@ const Page = () => {
     useEffect(() => {
         updateUser()
     }, [])
-
+    if (!_currentUser.isLoggedIn) {
+        return (
+            <div>you have to login</div>
+        )
+    }
     switch (archive) {
         case "profile":
-            if (!_currentUser.isLoggedIn) {
-                return (
-                    <div>Please log in to view your profile.</div>
-                )
-            }
+
             return (
-                <div>Welcome, {_currentUser.user?.username}!</div>
+                <ProfileDetail />
             )
         case "add":
             return <BlogDetail />

@@ -43,7 +43,8 @@ h5,
 h6 {
   font-weight: 700;
   margin: 1.5rem 0;
-  font-family: var(--font-noto-serif), serif !important;
+  /* font-family: var(--font-noto-serif), serif !important; */
+  color: var(--color-five);
 }
 
 .blog-post h1 {
@@ -60,10 +61,16 @@ h6 {
 
 .blog-post p {
   margin: 1.5rem 0;
-  line-height: 1.65rem;
+  line-height: 1.5rem;
   font-size: 1rem;
   letter-spacing: 0.05px;
   text-align: justify;
+  color: black;
+  opacity: 0.75;
+}
+
+.blog-post p span {
+  all: unset !important
 }
 
 .blog-post figure img {

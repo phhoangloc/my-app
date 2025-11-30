@@ -42,10 +42,10 @@ const Header = () => {
     const toPage = useRouter();
     return (
         <div className="h-12 fixed top-0 w-full bg-one lg:bg-transparent z-1">
-            <div className="max-w-(--xxl) m-auto h-full flex justify-between items-center px-2">
+            <div className="max-w-(--xl) m-auto h-full flex justify-between items-center px-2">
                 <div className="flex gap-2 items-center">
                     <MenuIcon className='h-8! w-8! rounded-[50%] m-auto sm:hidden! cursor-pointer hover:opacity-70 transition-opacity' onClick={() => { store.dispatch(setMenu(true)) }} />
-                    <div className="h-full flex flex-col justify-center font-bold text-3xl uppercase pl-2" onClick={() => toPage.push("/")}>
+                    <div className="h-full flex flex-col justify-center font-bold text-3xl uppercase pl-2 cursor-pointer" onClick={() => toPage.push("/")}>
                         {process.env.name}
                     </div>
                 </div>

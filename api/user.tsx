@@ -94,3 +94,17 @@ export const ApiUploadFile = async ({ position, archive, file }: QyeryParams) =>
     }
 
 }
+
+export const ApiDeleteItem = async ({ position, archive, id }: QyeryParams) => {
+    const result = await axios.delete(process.env.api_url + "api/" +
+        position +
+        "/" + archive +
+        "/" + id,
+        {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            withCredentials: true
+        })
+    return (result.data)
+}

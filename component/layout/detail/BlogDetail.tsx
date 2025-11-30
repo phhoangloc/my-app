@@ -23,6 +23,7 @@ const BlogDetail = () => {
                 set_slug("");
                 set_content("write your content here...");
                 set_loadBlog(true);
+                set_imageName("")
                 return;
             }
             const res = await ApiItem({ slug: slug, archive: "blog" });
@@ -43,7 +44,6 @@ const BlogDetail = () => {
         getBlogDetail(slug);
     }, [slug]);
 
-
     async function UpdateBlog(id: number): Promise<void> {
         const res = await ApiUpdateItem({ position: 'user', archive: 'blog', id }, {
             name: _name,
@@ -57,7 +57,6 @@ const BlogDetail = () => {
             alert("Failed to update blog");
         }
     }
-
     async function CreateBlog(): Promise<void> {
         const res = await ApiCreateItem({ position: 'user', archive: 'blog' }, {
             name: _name,
@@ -78,7 +77,6 @@ const BlogDetail = () => {
         const reader: FileReader = new FileReader();
         reader.readAsDataURL(file);
         reader.onloadend = async function () {
-
             const result = await ApiUploadFile({ position: "user", archive: "pic", file: file },)
             console.log(result)
             if (result.success) {
@@ -95,22 +93,21 @@ const BlogDetail = () => {
                         <UploadButton name={<AddAPhotoIcon className="w-12! h-12! opacity-50 hover:opacity-100 cursor-pointer absolute top-0 left-0 z-1" />} onClick={(e) => getFile(e)} />
                         {process.env.ftp_url && _imageName ? <Image src={process.env.ftp_url + _imageName} fill className="object-cover" alt={_imageName.toString()} /> : null}
                     </div>
-                    <div className="flex">
-                        /<input type="text" value={_slug} placeholder="Enter slug" onChange={(e) => set_slug(e.target.value)} className="w-full outline-none px-2" />
+                    <div className="flex w-full px-2">
+                        /<input type="text" value={_slug} placeholder="Enter slug" onChange={(e) => set_slug(e.target.value)} className="w-max outline-none px-2" />
                     </div>
                     <div className="flex">
                         <input type="text" value={_name} placeholder="Enter title" onChange={(e) => set_name(e.target.value)} className="w-full h-12 outline-none px-2 font-bold text-lg" />
                     </div>
 
-                    <div className="flex flex-col gap-1">
+                    <div className="blog-post">
                         <Textarea getInnerHTML={(html) => set_newcontent(html)} innerHTML={_content} />
                     </div>
                     {slug ?
                         <button className="w-32 h-10 bg-three text-white rounded-md uppercase font-bold"
                             onClick={() => UpdateBlog(_id)}>Update</button> :
                         <button className="w-32 h-10 bg-three text-white rounded-md uppercase font-bold"
-                            onClick={() => CreateBlog()}
-                        >Create</button>}
+                            onClick={() => CreateBlog()}>Create</button>}
                 </div>
 
 

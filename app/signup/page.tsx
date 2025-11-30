@@ -5,20 +5,18 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { useState } from 'react';
-import { ApiLogin } from '@/api/client';
-import { useRouter } from 'next/navigation';
+import { ApiLogin, ApiSignup } from '@/api/client';
 const Page = () => {
 
     const [_isView, set_isView] = useState<boolean>(false)
     const [_username, set_username] = useState<string>("")
     const [_password, set_password] = useState<string>("")
+    const [_email, set_email] = useState<string>("")
 
     const Login = async () => {
-        const res = await ApiLogin({ username: _username, password: _password })
+        const res = await ApiSignup({ username: _username, password: _password, email: _email })
         console.log(res)
     }
-
-    const toPage = useRouter()
     return (
         <div className='max-w-(--sm) m-auto p-4'>
             <div className="">
@@ -27,9 +25,9 @@ const Page = () => {
                     <PersonIcon className='mx-auto w-full! h-full! ' />
                 </div>
                 <div className="h-12"></div>
-                <div className="text-center uppercase text-2xl font-bold">welcome</div>
+                <div className="text-center uppercase text-2xl font-bold">sign up</div>
                 <div className="h-4"></div>
-                <div className="text-center text-lg">log in to continue</div>
+                <div className="text-center text-lg"></div>
                 <div className="h-4"></div>
                 <div className="">username</div>
                 <div className="h-1"></div>
@@ -43,16 +41,13 @@ const Page = () => {
                         <VisibilityOffIcon className="absolute right-2 top-2" onClick={() => { set_isView(true) }} /> :
                         <RemoveRedEyeIcon className="absolute right-2 top-2" onClick={() => { set_isView(false) }} />}
                 </div>
+                <div className="h-4"></div>
+                <div className="">email</div>
+                <div className="h-1"></div>
+                <input onChange={(e) => set_email(e.currentTarget.value)} className="border border-three bg-white rounded-md w-full h-10 outline-three px-2" ></input>
             </div>
             <div className="h-12"></div>
-            <div className="text-center">you don't have any account</div>
-            <div className="w-max m-auto uppercase font-bold cursor-pointer hover:text-three" onClick={() => toPage.push("/signup")}>register!</div>
-            <div className="h-12"></div>
-            <button className='block! w-40 h-12 m-auto bg-three text-white rounded-md cursor-pointer' onClick={() => Login()}>LOG IN</button>
-            <div className="h-12 border-b border-three w-3/4 m-auto"></div>
-            <div className="h-12"></div>
-            <div className="flex rounded-md p-2 text-center w-max m-auto gap-2 cursor-pointer hover:text-three"><GoogleIcon className='h-full aspect-square! ' />Log In With Google</div>
-            <div className="flex rounded-md p-2 text-center w-max m-auto gap-2 cursor-pointer hover:text-three"><FacebookIcon className='h-full aspect-square! ' /> In With Facebook</div>
+            <button className='block! w-40 h-12 m-auto bg-three text-white rounded-md cursor-pointer uppercase' onClick={() => Login()}>Sign up</button>
         </div>
     )
 }

@@ -12,6 +12,7 @@ type BlogSummarize = {
         email: string
     }
     cover: string | null
+    content: string
     createdAt: string
     tag: Array<{
         tag: {
@@ -30,6 +31,20 @@ type QyeryParams = {
     slug?: string | "blog",
     archive?: string,
     name?: string,
+}
+export const ApiLogin = async (body: { username: string, password: string }) => {
+    const result = await axios.post(process.env.api_url + "api/login", body, {
+        withCredentials: true
+    })
+    return result.data
+}
+export const ApiSignup = async (body: { username: string, password: string, email: string }) => {
+    const result = await axios.post(process.env.api_url + "api/signup", body, {
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+    return result.data
 }
 export const ApiItem = async (queryParams: QyeryParams): Promise<ApiResponse> => {
     // Load directly from JSON file
